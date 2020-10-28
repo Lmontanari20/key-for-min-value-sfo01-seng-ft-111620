@@ -3,5 +3,12 @@
 
 def key_for_min_value(name_hash)
   key_result.Symbol.new
-  name_hash.each do 
+  min = 200
+  name_hash.each do |key, value|
+    if value < min
+      min = value
+      key_result = key
+    end
+  end
+  key_result
 end
